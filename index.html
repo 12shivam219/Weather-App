@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="./icons/cloud.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="shadow-2xl absolute top-1/2 left-1/2 -translate-x-2/4 -translate-y-2/4 rounded-xl">
+        <div class="block w-full">
+            <div class="block w-full h-full text-center">
+                <h1 class=" text-6xl font-mono text-blue-400">Weather-App</h1>
+            </div>
+            <p class="error"></p>
+            <div class="search-bar text-center mt-6">
+                <input type="search" name="search" id="search" placeholder="Enter City Name..."
+                    class="rounded-full border-2 border-solid border-blue-400 outline-none text-center p-1">
+            </div>
+            
+            <div class="loader" id="loader">
+                Loading Weather info.
+            </div>
+        </div>
+    </header>
+
+    <main class="shadow-2xl absolute top-1/2 left-1/2 -translate-x-2/4 -translate-y-2/4">
+        <div class="all block w-full h-full">
+            <div class="p-5">
+
+                <h1 class="text-4xl text-blue-400"><span class="text-4xl text-blue-400" onclick="back()">&#8592;</span> Weather App</h1>
+            </div>
+            <hr class="bg-black w-11/12 m-auto">
+            <img src="./icons/cloud.svg" alt="" class="ic-img">
+
+            <div class="temp">
+                <h1 class="h1"> </h1>
+            </div>
+
+            <div class="weather text-center text-xl my-2">cloud</div>
+
+            <div class="location text-center text-xl mb-10">
+                <i class="fa fa-location"></i>
+                <span class="city"></span>
+            </div>
+
+            <div class="bottom">
+                <div class="column feels">
+                    <i class="fa fa-thermometer text-4xl"></i>
+
+                    <div class="details pl-3">
+                        <div class="temp">
+                            <span class="numb1"></span>
+                        </div>
+                        <div>feels like</div>
+                    </div>
+                </div>
+
+                <div class="column humidity">
+                    <i class="fa fa-droplet text-4xl"></i>
+                    <div class="details pl-3">
+                        <span class="numb2">65%</span>
+                        <div>Humidity</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <script src="https://kit.fontawesome.com/6a7c0ad8bf.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
