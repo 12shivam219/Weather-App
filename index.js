@@ -38,7 +38,7 @@ function fetchData() {
         inf.style.display="none"
       }, 2000);
       document.getElementsByTagName("header")[0].style.display = "flex";
-      info_city.style.display = "block"
+      info_city.style.display = "inline-block"
       document.getElementById('loader').style.display = "none"
       document.getElementsByTagName("main")[0].style.display = "none";
       throw new Error("Something Wrong");
@@ -69,4 +69,6 @@ function weatherDetails(info) {
 let back = () => {
   document.getElementsByTagName("header")[0].style.display = "flex";
   document.getElementsByTagName("main")[0].style.display = "none";
+  document.getElementById('loader').style.display = "none"
+  info_city.style.display = "inline-block"
 }
